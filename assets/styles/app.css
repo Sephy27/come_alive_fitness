@@ -1,3 +1,175 @@
-body {
-    background-color: skyblue;
+
+html, body {
+    
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    
 }
+
+/*Bandeau navbar*/
+.hero-scene {
+    
+    width: 100%;
+    min-height: 60vh; /* hauteur responsivisée */
+    background: url("/images/bandeau4.png") center/cover no-repeat;
+    display: flex;
+}
+
+@media (max-width: 576px) {
+  .hero-scene {
+    min-height: 45vh;
+  }
+}
+
+/* Effet sur les icônes réseaux */
+.footer a i {
+  display: inline-block;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.footer a:hover i {
+  transform: scale(1.15);
+  opacity: .85;
+}
+
+
+
+/* Titres de sections */
+.section-title { 
+    font-weight: 800; 
+    letter-spacing: .02em; 
+}
+
+/* Petits effets */
+.card-hover { 
+    transition: transform .2s ease, box-shadow .2s ease; 
+}
+
+.card-hover:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,.08); 
+}
+
+/* Icônes réseaux : ciblage précis (seulement les logos) */
+.social-icon { 
+    display:inline-block; 
+    transition: transform .2s ease, opacity .2s ease; 
+}
+
+.social-icon:hover { 
+    transform: scale(1.15); 
+    opacity: .9; 
+}
+
+/* Instagram dégradé fidèle */
+.instagram-gradient { 
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Badges/points forts */
+.feature i { 
+    width: 2.25rem; 
+    height: 2.25rem; 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center; 
+    border-radius:999px;
+     background: #f1f3f5; 
+}
+
+/* Section carte */
+.map-wrapper { 
+    
+    position: relative; 
+    
+    overflow: hidden; 
+    
+    border-radius: 1rem; 
+
+}
+.map-wrapper iframe { 
+    display:block; 
+    width:100%; 
+    height: 380px; 
+    border:0; 
+}
+
+
+
+
+/* ---- Section Pourquoi nous choisir (version premium) ---- */
+.soft-gradient { 
+    background: radial-gradient(1000px 400px at -5% -5%, rgba(99,102,241,.08), transparent 60%), 
+    radial-gradient(800px 300px at 105% 10%, rgba(16,185,129,.08), transparent 60%); 
+}
+
+.feature-badge { 
+    width: 44px; 
+    height: 44px; 
+    border-radius: 999px; 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center; 
+    background: #f3f4f6; 
+    color:#111827; 
+    flex: 0 0 44px; 
+}
+
+.kpi-number { 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    line-height:1; 
+}
+
+.kpi-label { 
+    font-size: .8rem; 
+    color:#6b7280; 
+}
+
+
+.img-stack {
+    position: relative; 
+ }
+
+.img-stack .main {
+    display: block;               /* évite les espaces fantômes autour des <img> inline */
+    border-radius: 1rem;          /* cohérent avec tes autres arrondis */
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+ }
+
+.img-stack .vignette { 
+    position:absolute; 
+    width: 42%; 
+}
+
+.img-stack .vignette.v1 { 
+    right: -5%; 
+    top: -10%; 
+    transform: rotate(6deg); 
+}
+
+.img-stack .vignette.v2 { 
+    left: -6%; 
+    bottom: -4%; 
+    transform: rotate(-3deg); 
+}
+
+
+.img-stack .floating-card { 
+    position:absolute; 
+    right: -4%; 
+    bottom: -6%; 
+    border-radius: 1rem; 
+}
+
+
+
+
+
+
