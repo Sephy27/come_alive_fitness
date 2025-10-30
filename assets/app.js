@@ -7,4 +7,13 @@ import './bootstrap.js';
  */
 import './styles/app.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+
+
+document.addEventListener("scroll", () => {
+  const btn = document.querySelector(".back-to-top");
+  btn.style.display = window.scrollY > 300 ? "flex" : "none";
+});
+
+
+
+

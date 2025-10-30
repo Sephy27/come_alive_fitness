@@ -169,6 +169,132 @@ html, body {
 }
 
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all .2s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* HERO */
+    .hero-try {
+      position: relative;
+      min-height: 55vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 3rem 1.25rem;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('/images/hero-try.png') center/cover no-repeat;
+    }
+
+    .hero-try h1 { 
+        font-weight: 800; 
+        letter-spacing: .02em; 
+        font-size: clamp(2rem, 1.2rem + 2vw, 3rem); 
+    }
+
+    .hero-try p  { 
+        font-size: clamp(1rem, .9rem + .5vw, 1.125rem); 
+        opacity:.95; 
+    }
+
+    /* TIMELINE steps */
+    .timeline { 
+        position: relative; 
+    }
+    .timeline::before {
+      content:""; 
+      position:absolute; 
+      left:22px; 
+      top:0; 
+      bottom:0; 
+      width:2px; 
+      background: var(--bs-border-color, #e5e7eb);
+    }
+
+    .timeline-item { 
+        position:relative; 
+        padding-left:64px; 
+    }
+
+    .timeline-bullet {
+      position:absolute; 
+      left:14px; 
+      top:.25rem; 
+      width:18px; 
+      height:18px; 
+      border-radius:50%;
+      background: var(--bs-primary); 
+      box-shadow: 0 0 0 4px rgba(13,110,253,.15);
+    }
+
+    /* Cards hover doux */
+    .card-hover { 
+        transition: transform .2s ease, box-shadow .2s ease; 
+    }
+
+    .card-hover:hover { 
+        transform: translateY(-4px); 
+        box-shadow: 0 10px 30px rgba(0,0,0,.08); 
+    }
+
+    /* Checklist items */
+    .check-item { 
+        display:flex; 
+        align-items:flex-start; 
+        gap:.75rem; 
+    }
+
+    .check-item i { 
+        font-size:1.1rem; 
+        color: var(--bs-success); 
+        margin-top:.15rem; 
+    }
+
+    /* CTA sticky (mobile-friendly) */
+    .cta-sticky {
+      position: sticky; 
+      bottom: 0; 
+      z-index: 50; 
+      background: #0d6efd; 
+      color:#fff; 
+      padding:.75rem 1rem; 
+      text-align:center;
+      border-top-left-radius:.75rem; 
+      border-top-right-radius:.75rem;
+    }
+
+    .cta-sticky a { 
+        color:#fff; 
+        text-decoration:none; 
+        font-weight:600; 
+    }
+
+    @media (max-width: 576px) {
+      .timeline::before { left:16px; }
+      .timeline-item { padding-left:56px; }
+      .timeline-bullet { left:8px; }
+    }
 
 
 
